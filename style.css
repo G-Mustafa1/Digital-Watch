@@ -1,0 +1,66 @@
+*{
+   padding: 0px;
+   margin: 0px;
+   box-sizing: border-box;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+html,body{
+   display: grid;
+   height: 100vh;
+   place-items: center;
+   /* background: #2e2e45; */
+   background-color: #000;
+}
+.digital{
+   width: 460px;
+   height: 150px;
+   border-radius: 10px;
+   position: relative;
+   cursor: pointer;
+   background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+   animation: animate 1.5s linear infinite;
+}
+.digital .clock,
+.digital span{
+   position: absolute;
+   top: 50%;
+   left: 40%;
+   margin-left: 40px;
+   transform: translate(-50%, -50%);
+}
+.digital .clock{
+   z-index: 1;
+   height: 120px;
+   letter-spacing: 1px;
+   width: 420px;
+   background: #2d2f38;
+   border-radius: 5px;
+   text-align: center;
+}
+.clock #time{
+   line-height: 120px;
+   color: #fff;
+   font-size: 55px;
+   font-weight: bold;
+   background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+   -webkit-text-fill-color: transparent;
+   -webkit-background-clip: text;
+   animation: animate 1.5s linear infinite;
+}
+@keyframes animate{
+   100%{
+      filter: hue-rotate(360deg);
+   }
+}
+.digital span{
+   height: 100%;
+   width: 100%;
+   border-radius: 10px;
+   background: inherit;
+}
+   .digital span:first-child{
+      filter: blur(10px);
+   }
+   .digital span:last-child{
+      filter: blur(20px);
+   } 
